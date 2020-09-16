@@ -18,5 +18,12 @@ class Estoque (var nome: String, var qtdAtual: Int, var qtdMinima: Int) {
         qtdAtual += qtd
     }
 
+    fun mudarQtdMinima(qtd: Int){
+        when (qtdAtual >= qtd) {
+            true -> qtdAtual -= qtd
+            false -> println("Valor para remoção é maior que a quantidade em estoque")
+        }
+    }
+
     fun precisaRepor(): Boolean = (qtdAtual <= qtdMinima)
 }
