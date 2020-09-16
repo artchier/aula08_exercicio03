@@ -31,4 +31,10 @@ class Estoque (var nome: String, var qtdAtual: Int, var qtdMinima: Int) {
         if (qtd > qtdAtual) println("Erro: Quantidade é maior que quantidade em estoque")
         else qtdAtual -= qtd
     }
+
+    fun mudarNome(nome: String) {
+        this.nome = nome
+    }
+
+    fun mostra() = println ("Nome do produto: $nome; Quantidade mínima: $qtdMinima; Quantidade atual: $qtdAtual.")
 }

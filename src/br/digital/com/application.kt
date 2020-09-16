@@ -28,7 +28,7 @@ fun main(){
     estoque1.mostra()
     println()
 
-    //estoque1.mudarNome("Coca")
-    //estoque1.mostra()
-    //println()
+    estoque1.mudarNome("Coca")
+    estoque1.mostra()
+    println()
 }
