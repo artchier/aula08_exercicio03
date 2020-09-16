@@ -16,11 +16,11 @@ fun main(){
     println()
 
     estoque1.repor(20)
-    println(estoque1.precisaRepor())
     estoque1.mostra()
     println()
 
-    estoque1.darBaixa(5)
+    estoque1.darBaixa(30)
+    println(estoque1.precisaRepor())
     estoque1.mostra()
     println()
 
