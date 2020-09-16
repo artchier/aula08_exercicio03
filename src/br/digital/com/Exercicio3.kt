@@ -8,6 +8,8 @@ fun main() {
 
     estoque.mudarNome("Feijão")
 
+    estoque.mudarQtdMinima(10)
+
     estoque.mostra()
 
 }
