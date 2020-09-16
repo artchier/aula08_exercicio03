@@ -1,6 +1,6 @@
 package br.digital.com
 
-class Estoque(var nome: Estoque, var qtdAtual: Int, var qtdMinima: Int) {
+class Estoque(var nome: String, var qtdAtual: Int, var qtdMinima: Int) {
 
     init {
         println("Novo estoque criado")
@@ -20,8 +20,10 @@ class Estoque(var nome: Estoque, var qtdAtual: Int, var qtdMinima: Int) {
 
     fun mudarQtdMinima(novaqtdMinima: Int){
         when (novaqtdMinima >= 1) {
-            true -> qtdMinima = novaqtdMinima
-            false -> println("Valor para remoção é menor que 1")
+            true -> {qtdMinima = novaqtdMinima
+                println("Nova quantidade minima...:")
+                mostra()}
+            false -> println("Valor para a quantidade minima é menor que 1, alteração não permitida!")
         }
     }
 
