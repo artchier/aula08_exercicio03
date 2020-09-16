@@ -13,4 +13,10 @@ class Estoque (var nome: String, var qtdAtual: Int, var qtdMinima: Int) {
     var _qtdMinima: Int = qtdMinima
         get() = qtdMinima
         private set
+
+    fun repor(qtd: Int){
+        qtdAtual += qtd
+    }
+
+    fun precisaRepor(): Boolean = (qtdAtual <= qtdMinima)
 }
