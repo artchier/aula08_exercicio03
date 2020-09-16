@@ -15,28 +15,28 @@ class Estoque(var nome: String, var qtdAtual: Int, var qtdMinima: Int) {
         private set
 
     fun repor(qtd: Int){
-        qtdAtual += qtd
+        _qtdAtual += qtd
     }
 
     fun mudarQtdMinima(novaqtdMinima: Int){
         when (novaqtdMinima >= 1) {
-            true -> {qtdMinima = novaqtdMinima
+            true -> {_qtdMinima = novaqtdMinima
                 println("Nova quantidade minima...:")
                 mostra()}
             false -> println("Valor para a quantidade minima é menor que 1, alteração não permitida!")
         }
     }
 
-    fun precisaRepor(): Boolean = (qtdAtual <= qtdMinima)
+    fun precisaRepor(): Boolean = (_qtdAtual <= _qtdMinima)
 
     fun darBaixa(qtd: Int){
-        if (qtd > qtdAtual) println("Erro: Quantidade é maior que quantidade em estoque")
-        else qtdAtual -= qtd
+        if (qtd > _qtdAtual) println("Erro: Quantidade é maior que quantidade em estoque")
+        else _qtdAtual -= qtd
     }
 
     fun mudarNome(nome: String) {
         this.nome = nome
     }
 
-    fun mostra() = println ("Nome do produto: $nome; Quantidade mínima: $qtdMinima; Quantidade atual: $qtdAtual.")
+    fun mostra() = println ("Nome do produto: $nome; Quantidade mínima: $_qtdMinima; Quantidade atual: $_qtdAtual.")
 }
